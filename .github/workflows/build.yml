@@ -57,7 +57,7 @@ jobs:
           name: Artifacts
           path: |    
             **/build/libs/
-            !common/builds/libs/
+            !common/build/libs/
             !build/libs/
             !**/*-dev.jar
             !**/*-shadow.jar
