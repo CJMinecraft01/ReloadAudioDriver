@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "cjminecraft.rad.quilt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "KeyboardHandlerMixin"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

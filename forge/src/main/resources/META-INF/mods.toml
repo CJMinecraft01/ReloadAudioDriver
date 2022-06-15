@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[41,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "rad"
+version = "${version}"
+displayName = "Reload Audio Driver"
+authors = "CJMinecraft01, JayJay1989BE"
+description = '''
+Reloads the audio driver when pressing F3 + R.
+'''
+logoFile = "assets/rad/logo.png"
+
+[[dependencies.rad]]
+modId = "forge"
+mandatory = true
+versionRange = "[41,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.rad]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.rad]]
+modId = "architectury"
+mandatory = true
+versionRange = "[5.6.22,)"
+ordering = "AFTER"
+side = "BOTH"

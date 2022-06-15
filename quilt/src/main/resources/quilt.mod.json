@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "mixin": [
+    "rad.mixins.json",
+    "rad-common.mixins.json"
+  ],
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "rad",
+    "version": "${version}",
+    "name": "Reload Audio Driver",
+    "description": "Reloads the audio driver when pressing F3 + R.",
+    "authors": ["CJMinecraft01", "JayJay1989BE"],
+    "contact": {
+      "homepage": "https://github.com/CJMinecraft01",
+      "sources": "https://github.com/CJMinecraft01/ReloadAudioDriverFabric",
+      "issues" : "https://github.com/CJMinecraft01/ReloadAudioDriverFabric/issues"
+    },
+    "license": "MIT",
+    "icon": "assets/rad/logo.png",
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "environment": "*",
+    "entrypoints": {
+      "init": [
+        "cjminecraft.rad.quilt.ReloadAudioDriverQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.19"
+      },
+      {
+        "id": "architectury",
+        "version": ">=5.6.20"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "rad",
+  "version": "${version}",
+  "name": "Reload Audio Driver",
+  "description": "Reloads the audio driver when pressing F3 + R.",
+  "authors": [
+    "CJMinecraft01",
+    "JayJay1989BE"
+  ],
+  "contact": {
+    "homepage": "https://github.com/CJMinecraft01",
+    "sources": "https://github.com/CJMinecraft01/ReloadAudioDriverFabric",
+    "issues" : "https://github.com/CJMinecraft01/ReloadAudioDriverFabric/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/rad/logo.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "cjminecraft.rad.fabric.ReloadAudioDriverFabric"
+    ]
+  },
+  "mixins": [
+    "rad.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19",
+    "architectury": ">=5.6.20"
+  }
+}
