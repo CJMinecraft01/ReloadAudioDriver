@@ -9,14 +9,14 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.IExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.network.NetworkConstants;
+import net.minecraftforge.fmllegacy.network.FMLNetworkConstants;
 
 @Mod(ReloadAudioDriver.MOD_ID)
 @Mod.EventBusSubscriber
 public class ReloadAudioDriverForge {
     public ReloadAudioDriverForge() {
         ReloadAudioDriver.init();
-        ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -> new IExtensionPoint.DisplayTest(() -> NetworkConstants.IGNORESERVERONLY, (remote, isServer) -> true));
+        ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -> new IExtensionPoint.DisplayTest(() -> FMLNetworkConstants.IGNORESERVERONLY, (remote, isServer) -> true));
     }
 
     @SubscribeEvent

@@ -31,7 +31,7 @@ jobs:
     name: "Build Fabric, Forge and Quilt mods"
     strategy:
       matrix:
-        java: [ 17 ]
+        java: [ 16 ]
         os: [ ubuntu-20.04 ]
         dist: [ adopt ]
     runs-on: ${{ matrix.os }}
