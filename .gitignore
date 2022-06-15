@@ -11,6 +11,7 @@ libs/
 fabric/run/
 forge/run/
 quilt/run/
+.architectury-transformer
 
 .classpath
 .project
