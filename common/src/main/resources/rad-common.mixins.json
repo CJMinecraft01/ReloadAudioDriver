@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "cjminecraft.rad.mixin",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_8",
   "client": [
   ],
   "mixins": [

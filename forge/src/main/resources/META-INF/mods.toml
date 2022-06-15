@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[37,)"
+loaderVersion = "[32,)"
 #issueTrackerURL = ""
 license = "MIT"
 
@@ -16,20 +16,20 @@ logoFile = "assets/rad/logo.png"
 [[dependencies.rad]]
 modId = "forge"
 mandatory = true
-versionRange = "[37,)"
+versionRange = "[32,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.rad]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.17,)"
+versionRange = "[1.16,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.rad]]
 modId = "architectury"
 mandatory = true
-versionRange = "[2.10.12,)"
+versionRange = "[1.32.63,)"
 ordering = "AFTER"
 side = "BOTH"
