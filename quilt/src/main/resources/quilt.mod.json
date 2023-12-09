@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "${mod_id}",
+    "version": "${version}",
+    "metadata": {
+      "name": "${mod_name}",
+      "description": "${description}",
+      "contributors": {
+        "${mod_author}": "Owner"
+      },
+      "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+      },
+      "license": "${license}",
+      "icon": "assets/${mod_id}/${mod_id}.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": "cjminecraft.rad.ReloadAudioDriverQuilt"
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.19.1"
+      },
+      {
+        "id": "quilted_fabric_api",
+        "versions": ">=7.0.2"
+      },
+      {
+        "id": "minecraft",
+        "versions": ">=1.20"
+      }
+    ]
+  },
+  "mixin": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.quilt.mixins.json"
+  ]
+}
+  

@@ -1,19 +1,15 @@
 package cjminecraft.rad;
 
-import cjminecraft.rad.events.KeyInputEvent;
+import cjminecraft.rad.api.events.IKeyInputEvent;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.SystemToast;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import org.lwjgl.glfw.GLFW;
 
 public class ReloadAudioDriver {
-    public static final String MOD_ID = "rad";
 
-    public static void init() {
-
-    }
-    public static void reloadAudioDriver(KeyInputEvent event){
+    public void reloadAudioDriver(IKeyInputEvent event){
         if (event.getAction() != GLFW.GLFW_PRESS)
             return;
         Minecraft client = Minecraft.getInstance();
@@ -24,7 +20,7 @@ public class ReloadAudioDriver {
                     client.getSoundManager().soundEngine.reload();
                     ReloadAudioDriver.showToast();
                 } else if (event.getKey() == GLFW.GLFW_KEY_Q) {
-                    client.gui.getChat().addMessage(new TranslatableComponent("reload_audio_driver.details"));
+                    client.gui.getChat().addMessage(Component.translatable("reload_audio_driver.details"));
                 }
             }
         }
@@ -34,8 +30,8 @@ public class ReloadAudioDriver {
         SystemToast.add(
                 Minecraft.getInstance().getToasts(),
                 SystemToast.SystemToastIds.TUTORIAL_HINT,
-                new TranslatableComponent("reload_audio_driver.toast.title"),
-                new TranslatableComponent("reload_audio_driver.toast.body")
+                Component.translatable("reload_audio_driver.toast.title"),
+                Component.translatable("reload_audio_driver.toast.body")
         );
     }
 }
