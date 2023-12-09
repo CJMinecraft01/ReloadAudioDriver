@@ -11,8 +11,9 @@
         "${mod_author}": "Owner"
       },
       "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "${homepage}",
+        "sources": "${sources}",
+        "issues": "${issues}"
       },
       "license": "${license}",
       "icon": "assets/${mod_id}/${mod_id}.png"
